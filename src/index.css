@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background-image: url("src/pages/dashboard.jpg"); */
+ /* background: -we  linear-gradient(135deg, #0f172a, #1e293b, #020617);bkit-linear-gradient (right,  #1e293b, #709de5);  */
+ /* background: radial-gradient( #f17006 0%, #ae562a 45%, #f17006 100% ); */
+/* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);  */
+background: linear-gradient(
+  /* 180deg, */
+  /* #fceadd 0%,
+  #f4c49d 35%,
+  #eea155 65%,
+  #f19233 100% */
+  /* 180deg, #1f1c2c, #948ac8 ,#1f1c2c   */
+ /* 135deg, #0f0c29, #302b63, #24243e */
+ /* 62deg, #8EC5FC 0%, #E0C3FC 100% */
+ /* to right, #ff5f6d, #ffc371 */
+ /* 135deg, #050505 0%, #1a0b2e 50%, #4b0082 100% */
+ /* 135deg, #000428, #004e92 */
+ 135deg, #141e30, #243b55, #2c5364
+);
+    min-height: 100vh;
+}
+ 
+
+
+
+/* 
+a {
+  color: rgb(245, 242, 242);
+  text-decoration: none;
+   
+} */
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+ 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}

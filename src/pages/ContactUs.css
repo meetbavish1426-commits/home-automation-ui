@@ -1,0 +1,148 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: left;
+  padding-left: 3%;
+  top: 40%;
+  transform: translateY(-40%);
+  font-size: 2.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.contact-container {
+  min-height: 100vh;
+  /* background: linear-gradient(120deg, #0f2027, #203a43, #2c5364); */
+  background: transparent;
+  display: flex;
+  gap: 20px ;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.contact-left,
+.contact-right {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  width: 350px;
+  margin: 15px;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.contact-left {
+  animation: slideLeft 1.2s ease forwards;
+}
+
+.contact-right {
+  animation: slideRight 1.2s ease forwards;
+}
+
+.contact-left h2,
+.contact-right h2 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  opacity: 0.9;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #00c6ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #7ed9ca;
+  transform: scale(1.05);
+}
+
+.contact-form button {
+  box-shadow: 0 0 0px #49746c;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 20px #68998f;
+}
+
+/*Animations */
+ @keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
