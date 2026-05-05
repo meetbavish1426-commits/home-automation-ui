@@ -244,7 +244,7 @@ function SignIn() {
         </div>
 
         <button onClick={handleSignup}>
-          Sign Up
+          Sign In
         </button>
 
       </div>

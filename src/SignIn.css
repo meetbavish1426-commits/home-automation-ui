@@ -10,8 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(135deg, #1f1c2c, #928dab); */
-  /* background: linear-gradient(135deg, #141e30, #243b55, #2c5364 ); */
+ 
   background: transparent;
   perspective: 1200px;
 }
@@ -36,12 +35,7 @@
   color: white;
 }
 
-/* Floating Animation */
-/* @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-} */
-
+ 
 /* Input Styling */
 .input-group {
   position: relative;

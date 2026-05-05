@@ -1,87 +1,3 @@
-//  import { useEffect, useRef } from "react";
- 
- 
-//  function GetStart() {
-   
- 
-//    const cardRef = useRef(null);
- 
-//    useEffect(() => {
-   
-
-//   const handleMouseMove = (e) => {
-//     const x = (window.innerWidth / 2 - e.pageX) / 25;
-//     const y = (window.innerHeight / 2 - e.pageY) / 25;
-
-//     if (cardRef.current) {
-//       cardRef.current.style.transform =
-//         `rotateY(${x}deg) rotateX(${y}deg)`;
-//     };
-//   };
-
- 
-
-//   document.addEventListener("mousemove", handleMouseMove);
-//   // document.addEventListener("mouseleave", resetTilt);
-
-//   return () => {
-//     document.removeEventListener("mousemove", handleMouseMove);
-//     // document.removeEventListener("mouseleave", resetTilt);
-//   };
-// }, []);
-
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-
-// export default function GetStart({ setIsLoggedIn }) {
-//   const [phone, setPhone] = useState("");
-//   const [password, setPassword] = useState("");
-//   const navigate = useNavigate();
-//     const cardRef = useRef(null);
-
-//   function startLogin() {
-//     if (!phone || !password) {
-//       alert("Submit phone Number and password");
-//       return;
-//     }
-
-    
-//     localStorage.setItem("isLoggedIn", "true");
-//     setIsLoggedIn(true);
-//     navigate("/dashboard");
-//   }
- 
-//    return (
-//     <div className="GetStart-container">
-//        <div className="GetStart-card" ref={cardRef}>
-//            <h2>Start</h2>
-
-// <div className="input-group">
-//   <input id="username" type="text" required />
-//   <label htmlFor="username">Username</label>
-// </div>
-
-// <div className="input-group">
-//   <input id="contact" type="text" required />
-//   <label htmlFor="contact">Phone Number or Email</label>
-// </div>
-
-// <div className="input-group">
-//   <input id="password" type="password" required />
-//   <label htmlFor="password">Password</label>
-// </div>
-
-// <button type="submit">Start</button>
- 
-//        </div>
-//      </div>
-//    );
-//  }
- 
-//  export default GetStart;
- 
-
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -140,7 +56,7 @@ export default function Login({ setIsLoggedIn }) {
 
     <div className="GetStart-container">
 
-      <div className="GetStart">
+      <div className="GetStart-card">
 
         <h2 style={{color:"white",textAlign:"center"}}>Login</h2>
         <br></br> <br></br>

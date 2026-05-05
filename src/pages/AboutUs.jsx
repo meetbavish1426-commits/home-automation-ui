@@ -57,7 +57,7 @@ export default function AboutUs() {
       <section className="about-third"  >
         <div className="third-card"> 
          
-            <h4 class="smallTitle">The Vision</h4>
+            <h4 className="smallTitle">The Vision</h4>
             <h2 className="SecTitle">To pioneer the global transformation towards intelligent living environment</h2>
             <p className="disc">
                 Smart Homes aims at revolutionizing the way individuals interact with their

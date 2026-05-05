@@ -1,140 +1,92 @@
+/* ==================== ABOUT US - MOBILE FIRST ==================== */
+
 .about-page {
   font-family: "Segoe UI", sans-serif;
   color: white;
   background: #0b0f17;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Hero Section */
 .about-hero {
   position: relative;
-  height: 80vh;
+  height: 40vh;
+  min-height: 300px;
   background: url('src/assets/aboutus-banner.webp') center/cover no-repeat;
-  border-radius: 20px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .about-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .about-hero h1 {
   position: relative;
-  font-size: 48px;
-  margin-bottom: 10px;
-  animation: fadeDown 1s ease forwards;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 8px;
+  z-index: 2;
 }
 
 .about-hero p {
   position: relative;
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   opacity: 0.9;
-  animation: fadeUp 1.2s ease forwards;
+  z-index: 2;
 }
 
 /* Middle Section */
 .about-middle {
-  padding: 80px 10%;
+  padding: 30px 16px;
   background: linear-gradient(180deg, #0b0f14, #111827);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .about-middle-box {
-  max-width: 800px;
-  margin: 0 auto 50px auto;
+  max-width: 100%;
+  margin: 0 auto 30px;
 }
 
 .about-middle-box h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 16px;
   color: #00ffd5;
 }
 
 .about-middle-box p {
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
   opacity: 0.9;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-/* third section */
-.about-third {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  background: url("src/assets/our-vision.webp") center/cover no-repeat;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: left;
-  text-align: left;
-  text-wrap: inherit;
-}
-
-.third-card {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.1);
-  width: 50%;
-}
-
-.about-third h4{
-    font-size: clamp(16px,1.5vw,22px);
-    font-weight: 500;
-    line-height: 2vw;
-    color: #E0EEEE;
-    padding-left: 3%;
-    padding-top: 20%;
-}
-.about-third h2 {
-    font-size: clamp(22px,2vw,32px);
-    font-weight: 600;
-    line-height: 2.5vw;
-    color: #E0EEEE;
-    padding-left: 3%;
-    /* padding-right: 50%; */
-    
-    justify-content: center;
-    display: center;
-    flex-direction: column;
-}
- 
-
-
-.about-third p {
-   
-    font-weight: 300;
-    line-height: 2vw;
-    border-top: 1px solid #2F3238;
-    padding-top: 2%;
-    margin-top: 2%;
-    color: #E0EEEE;
-    padding-left: 3%;
-    /* padding-right: 50%; */
-    justify-content: center;
-     
-}
-
-/* Cards */
+/* Middle Cards */
 .about-middle-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .middle-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  padding: 20px;
   border-radius: 14px;
   backdrop-filter: blur(6px);
   transition: 0.3s ease;
+  box-sizing: border-box;
 }
 
 .middle-card:hover {
@@ -144,39 +96,88 @@
 
 .middle-card h3 {
   color: #00ffd5;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
 }
 
 .middle-card p {
-  font-size: 15px;
+  font-size: 0.9rem;
   opacity: 0.85;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-middle {
-    padding: 50px 6%;
-  }
+/* Third Section */
+.about-third {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  min-height: 300px;
+  background: url("src/assets/our-vision.webp") center/cover no-repeat;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  margin: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
-  .about-middle-box h2 {
-    font-size: 28px;
-  }
+.third-card {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.about-third h4 {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #E0EEEE;
+  margin: 0 0 8px 0;
+}
+
+.about-third h2 {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.4;
+  color: #E0EEEE;
+  margin: 0 0 12px 0;
+}
+
+.about-third p {
+  font-weight: 300;
+  line-height: 1.6;
+  border-top: 1px solid #2F3238;
+  padding-top: 12px;
+  margin-top: 8px;
+  color: #E0EEEE;
+  font-size: 0.85rem;
 }
 
 /* Content Section */
 .about-content {
-  padding: 60px 10%;
+  padding: 30px 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .about-box {
   background: rgba(255, 255, 255, 0.05);
-  padding: 25px;
+  padding: 20px;
   border-radius: 14px;
   backdrop-filter: blur(10px);
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 .about-box:hover {
@@ -185,44 +186,133 @@
 }
 
 .about-box h2 {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #00f2fe;
+  font-size: 1.2rem;
 }
 
 .about-box ul {
   padding-left: 18px;
+  margin: 0;
 }
 
 .about-box li {
   margin: 8px 0;
+  font-size: 0.95rem;
 }
 
-/* Animations */
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+.about-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .about-page {
+    max-width: 100vw;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .about-hero {
+    height: 60vh;
+    margin: 20px 30px;
+  }
+
+  .about-middle {
+    padding: 60px 30px;
+  }
+
+  .about-middle-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-third {
+    height: 50vh;
+    margin: 20px 30px;
+  }
+
+  .third-card {
+    padding: 30px;
+  }
+
+  .about-content {
+    padding: 60px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .about-hero {
+    height: 80vh;
+    margin: 30px 40px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .about-middle {
+    padding: 80px 40px;
+  }
+
+  .about-middle-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .about-third {
+    height: 60vh;
+    margin: 30px 40px;
+  }
+
+  .third-card {
+    padding: 40px 50px;
+    justify-content: center;
+  }
+
+  .about-content {
+    padding: 80px 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .about-box:hover {
+    transform: translateY(-12px);
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-hero h1 {
-    font-size: 34px;
-  }
+/* ==================== PREVENT HORIZONTAL SCROLL ==================== */
+.about-page,
+.about-hero,
+.about-middle,
+.about-third,
+.about-content {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.about-middle-box h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #00ffd5;
+
+}
+
+.about-middle-box p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+/* ==================== PREVENT HORIZONTAL SCROLL ==================== */
+.about-page,
+.about-hero,
+.about-middle,
+.about-third,
+.about-content {
+  max-width: 100vw;
+  overflow-x: hidden;
 }

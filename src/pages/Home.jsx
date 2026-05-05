@@ -640,7 +640,7 @@ function Home() {
   const [hovered, setHovered] = useState(null);
 
   const cards = [
-    { id: 1, title: "Welcome to the Future of Smart Living", desc: "Whether it’s an apartment, villa, or bungalow.", img: "src/assets/first.jpg", gridSpan: "span 2" },
+    { id: 1, title: "Welcome to the Future of Smart Living", desc: "Whether it's an apartment, villa, or bungalow.", img: "src/assets/first.jpg", gridSpan: "span 2" },
     { id: 2, title: "Smart. Secure. Sustainable", desc: "Manage lighting, security, environment, and entertainment with a single touch or voice command", img: "src/assets/second.jpg", gridSpan: "span 1" },
     { id: 3, title: "Seamless Automation, Tailored for You", desc: "From basic smart setups to fully integrated home automation—customized to your lifestyle", img: "src/assets/three.jpg", gridSpan: "span 1" },
     { id: 4, title: "Monitor and Manage Your Home Remotely, Effortlessly.", desc: "From live views of each room to smart control of lights, security, and more, Hogar brings your home to your fingertips.", img: "src/assets/four.jpg", gridSpan: "span 2" },
@@ -796,8 +796,7 @@ const styles = {
 
   grid: {
     display: "grid",
-    // gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-    gridTemplateColumns: "1fr 1fr",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     gap: "40px",
   },
 
