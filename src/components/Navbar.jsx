@@ -53,17 +53,32 @@ export default function Navbar({ isLoggedIn, setIsLoggedIn }) {
           <div className="navbar-center-group">
             <Link to="/">Home</Link>
 
-            <div className="navbar-dropdown" onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)}>
-              <span className="navbar-dropdown-label">Solutions ▾</span>
-              {solutionsOpen && (
-                <div className="navbar-dropdown-menu">
-                  <Link to="/livingroom">Living Room Automation</Link>
-                  <Link to="/bedroom">Bedroom Automation</Link>
-                  <Link to="/bathroom">Bathroom Automation</Link>
-                  <Link to="/office">Office Automation</Link>
-                </div>
-              )}
-            </div>
+           <div className="navbar-dropdown">
+  <button
+    type="button"
+    className="navbar-dropdown-label"
+    onClick={() => setSolutionsOpen(!solutionsOpen)}
+  >
+    Solutions ▾
+  </button>
+
+  {solutionsOpen && (
+    <div className="navbar-dropdown-menu">
+      <Link to="/livingroom" onClick={() => setSolutionsOpen(false)}>
+        Living Room Automation
+      </Link>
+      <Link to="/bedroom" onClick={() => setSolutionsOpen(false)}>
+        Bedroom Automation
+      </Link>
+      <Link to="/bathroom" onClick={() => setSolutionsOpen(false)}>
+        Bathroom Automation
+      </Link>
+      <Link to="/office" onClick={() => setSolutionsOpen(false)}>
+        Office Automation
+      </Link>
+    </div>
+  )}
+</div>
 
             <Link to="/Services">Services</Link>
             <Link to="/AboutUs">About Us</Link>

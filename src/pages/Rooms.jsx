@@ -42,7 +42,7 @@ const handleIotLightToggle = async () => {
       {/* HEADER */}
       <div style={styles.page}> 
       <div style={styles.header}>
-        <h1 style={styles.title}>🏘 Room Automation</h1>
+        <h2 style={styles.title}>🏘 Room Automation</h2>
         <button style={styles.addBtn} onClick={() => setShowModal(true)}>
           + Add Room
         </button>
@@ -134,111 +134,145 @@ const handleIotLightToggle = async () => {
   );
 }
 
-const styles = {
+ const styles = {
   page: {
-    height: "100vh",
-    paddingTop: "80px",
+    minHeight: "100vh",
+    padding: "110px 24px 40px",
+    background: "linear-gradient(135deg, #0f172a, #1e293b)",
+    boxSizing: "border-box",
   },
-  
+
   header: {
+    maxWidth: "1200px",
+    margin: "0 auto 25px",
     display: "flex",
     justifyContent: "space-between",
-    marginBottom: "20px",
-     
-    padding:"15px 15px ",
-    
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: "15px",
   },
+
+  title: {
+    color: "white",
+    fontSize: "clamp(24px, 4vw, 38px)",
+    margin: 0,
+  },
+
   addBtn: {
     background: "#2563eb",
     color: "white",
     border: "none",
-    padding: "5px 5px",
-    borderRadius: "5px",
+    padding: "12px 20px",
+    borderRadius: "10px",
     cursor: "pointer",
-    height:"50px",
-    display: "center",
+    fontWeight: "700",
     width: "auto",
   },
+
   roomCard: {
-    background: " rgba(62, 184, 250, 0.5)",
-    padding: "20px",
-    marginBottom: "20px",
-    borderRadius: "14px",
-    boxShadow: "0 2px 6px rgba(255, 254, 254, 1)",
-        width: "auto",
+    maxWidth: "1200px",
+    margin: "0 auto 24px",
+    background: "rgba(62, 184, 250, 0.18)",
+    padding: "24px",
+    borderRadius: "18px",
+    boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
+    boxSizing: "border-box",
   },
+
   roomHeader: {
     display: "flex",
     justifyContent: "space-between",
-     
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: "12px",
+    marginBottom: "18px",
   },
+
+  roomTitle: {
+    margin: 0,
+    fontSize: "26px",
+    color: "#ffffff",
+  },
+
   roomBtn: {
     border: "none",
     color: "white",
-    padding: "08px 14px",
-    borderRadius: "8px",
-        width: "auto",
+    padding: "10px 18px",
+    borderRadius: "10px",
+    cursor: "pointer",
+    fontWeight: "700",
+    width: "auto",
+    minWidth: "150px",
   },
+
   devices: {
-    display: "flex",
-    gap: "15px",
-    flexWrap: "wrap",
-        width: "auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "16px",
   },
+
   device: {
     background: "white",
-    padding: "10px 15px",
-    borderRadius: "10px",
-    minWidth: "120px",
+    padding: "18px",
+    borderRadius: "14px",
     display: "flex",
-    justifyContent: "space-between",
-    
+    flexDirection: "column",
+    gap: "14px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
   },
+
   deviceBtn: {
     border: "none",
     color: "white",
-    padding: "5px 10px",
-    borderRadius: "6px",
+    padding: "10px 14px",
+    borderRadius: "8px",
+    cursor: "pointer",
+    fontWeight: "700",
+    width: "100%",
   },
+
   modalOverlay: {
     position: "fixed",
     inset: 0,
-    background: "rgba(0,0,0,0.4)",
+    background: "rgba(0,0,0,0.5)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    padding: "15px",
+    zIndex: 999,
   },
+
   modal: {
     background: "white",
     padding: "25px",
-    borderRadius: "12px",
-    width: "300px",
+    borderRadius: "15px",
+    width: "100%",
+    maxWidth: "350px",
   },
+
   input: {
-    width: "90%",
-    padding:"15px", 
+    width: "100%",
+    padding: "14px",
     marginBottom: "15px",
+    boxSizing: "border-box",
   },
+
   saveBtn: {
     background: "#22c55e",
     color: "white",
     border: "none",
-    padding: "8px 15px",
-    borderRadius: "6px",
+    padding: "10px 16px",
+    borderRadius: "8px",
+    flex: 1,
   },
+
   cancelBtn: {
     background: "#ef4444",
     color: "white",
     border: "none",
-    padding: "8px 15px",
-    borderRadius: "6px",
+    padding: "10px 16px",
+    borderRadius: "8px",
+    flex: 1,
   },
-  title:{
-    color:"white",
-    marginbottom:"50px",
-    display:"flex",
-    
-  }
 };
-
 export default Rooms;

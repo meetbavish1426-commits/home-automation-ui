@@ -1,167 +1,145 @@
 export default function Office() {
   return (
-     <div style={styles.container}>
-     <div style={styles.boxes}>
-      <h1 style={styles.Firsttitle}>Build Smart Office Automation.</h1>
+    <div style={styles.container}>
+
+      <div
+        style={{
+          ...styles.section,
+          ...styles.rightContent,
+          backgroundImage: "url('src/assets/office 01.jpg')",
+        }}
+      >
+        <div style={styles.textBox}>
+          <h1 style={styles.title}>Build Smart Office Automation.</h1>
+        </div>
       </div>
-     <div style={styles.box1}>
-      <h2 style={styles.Sectitle}>Design Your Smart Office</h2>
-      <p style={styles.Sectext}>
-       Workspace Automation
-        Solutions that transform daily work life
-        </p>
-     </div>
-      <div style={styles.box2}>
-        <h2 style={styles.Thirdtitle}> Smart Security and Access Control</h2>
-        <p style={styles.Thirdtext}>
-          Keep your smart office secure with automated security systems. Schedule access permissions and monitor activity to ensure a safe and productive work environment.
-         </p>
-      </div>
-      <div style={styles.box3}>
-        <h2 style={styles.Fourtitle}>Blinds Automation </h2>
-        <p style={styles.Fourtext}>
-        Give your office design a modern touch with smart blinds. They blend seamlessly with your interiors and offer multiple scene modes like morning, evening, and party mode for a perfect office decor upgrade
+
+      <div
+        style={{
+          ...styles.section,
+          ...styles.leftContent,
+          backgroundImage: "url('src/assets/office 01.webp')",
+        }}
+      >
+        <div style={styles.textBox}>
+          <h2 style={styles.title}>Design Your Smart Office</h2>
+          <p style={styles.text}>
+            Workspace Automation Solutions that transform daily work life
           </p>
+        </div>
       </div>
-      <div style={styles.box4}>
-        <h2 style={styles.Fivetitle}>Smart Office Lighting to Match Every Mood</h2>
-        <p style={styles.Fivetext}>
-          Customize your office decor with smart lighting. Adjust brightness and color for reading, relaxing, or setting the perfect ambience with smart office automation
-        </p>
+
+      <div
+        style={{
+          ...styles.section,
+          ...styles.leftContent,
+          backgroundImage: "url('src/assets/office access control.webp')",
+        }}
+      >
+        <div style={styles.textBox}>
+          <h2 style={styles.title}>Smart Security and Access Control</h2>
+          <p style={styles.text}>
+            Keep your smart office secure with automated security systems.
+            Schedule access permissions and monitor activity to ensure a safe
+            and productive work environment.
+          </p>
+        </div>
       </div>
-      
+
+      <div
+        style={{
+          ...styles.section,
+          ...styles.leftContent,
+          backgroundImage: "url('src/assets/office04.webp')",
+        }}
+      >
+        <div style={styles.textBox}>
+          <h2 style={styles.title}>Blinds Automation</h2>
+          <p style={styles.text}>
+            Give your office design a modern touch with smart blinds. They blend
+            seamlessly with your interiors and offer multiple scene modes.
+          </p>
+        </div>
+      </div>
+
+      <div
+        style={{
+          ...styles.section,
+          ...styles.leftContent,
+          backgroundImage: "url('src/assets/office 02.jpg')",
+        }}
+      >
+        <div style={styles.blackTextBox}>
+          <h2 style={styles.title}>Smart Office Lighting to Match Every Mood</h2>
+          <p style={styles.text}>
+            Customize your office decor with smart lighting. Adjust brightness
+            and color for reading, relaxing, or setting the perfect ambience.
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 }
 
 const styles = {
   container: {
-    // paddingTop: "60px", 
     width: "100%",
     color: "white",
-    // textAlign: "center"
+    overflowX: "hidden",
+    background: "#020617",
   },
-  boxes: {
+
+  section: {
+    minHeight: "clamp(420px, 70vh, 650px)",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    boxSizing: "border-box",
+    padding: "clamp(80px, 10vw, 130px) clamp(20px, 6vw, 80px)",
+    position: "relative",
+  },
+
+  rightContent: {
     alignItems: "flex-end",
-    height: "650px",
-    width: "100%",
-    color: "white",
-    objectfit: "cover",
-    objectposition: "left",
-    backgroundImage: "url('src/assets/office 01.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    paddingLeft: "22%",
-    },
-    Firsttitle: {
-      fontSize: "2.5rem",
-      fontweight: "bold",
-      paddingTop: "130px",
-      width: "50%",
-    },
- 
-  box1: {
-     display: "flex",
-      height: "650px",
-    width: "100%",
-    flexDirection: "column",
-    alignItems: "left",
-    objectfit: "cover",
-    objectposition: "left", 
-    backgroundImage: "url(' src/assets/office 01.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    justifyContent: "center",
-    paddingLeft: "4%",
+    textAlign: "left",
   },
-  Sectitle:{
-      fontSize: "2.5rem",
-      fontweight: "bold",
-      width: "50%",
+
+  leftContent: {
+    alignItems: "flex-start",
+    textAlign: "left",
   },
-  Sectext: {
-      fontSize: "1.2rem",
-      width: "50%",
-      marginTop: "10px",
+
+  textBox: {
+    width: "min(100%, 620px)",
+    background: "transparent",
+    padding: "clamp(20px, 4vw, 36px)",
+    borderRadius: "20px",
+    backdropFilter: "blur(4px)",
   },
-  box2:{
-     display: "flex",
-      height: "650px",
-    width: "100%",
-    flexDirection: "column",
-    alignItems: "left",
-    // objectfit: "cover",
-    // objectposition: "left" ,
-    backgroundImage: "url('src/assets/office access control.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    justifyContent: "center",
-    paddingLeft: "5%",
-    color: "white",
+
+  blackTextBox: {
+    width: "min(100%, 620px)",
+    background: "rgba(255,255,255,0.65)",
+    padding: "clamp(20px, 4vw, 36px)",
+    borderRadius: "20px",
+    backdropFilter: "blur(4px)",
+    color: "#111827",
   },
-  Thirdtitle: {
-    fontSize: "2.5rem",
-      fontweight: "bold",
-      width: "50%",
+
+  title: {
+    fontSize: "clamp(1.8rem, 5vw, 2.8rem)",
+    fontWeight: "800",
+    lineHeight: 1.2,
+    margin: "0 0 14px",
   },
-  Thirdtext: {
-      fontSize: "1.2rem",
-      width: "50%",
-      marginTop: "10px",
-  },
-  box3: {
-     display: "flex",
-      height: "650px",
-    width: "100%",
-    flexDirection: "column",
-    alignItems: "left",
-    // objectfit: "cover",
-    // objectposition: "right" ,
-    backgroundImage: "url('src/assets/office04.webp')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    justifyContent: "center",
-    right: "0",
-    Gap: "30px",
-    paddingLeft: "5%",
-    color: "white",
-  },
-  Fourtitle: {
-    fontSize: "2.5rem",
-      fontweight: "bold",
-      width: "50%",
-      // alignItems: "right",
-  },
-  Fourtext: {
-      fontSize: "1.2rem",
-      width: "50%",
-      marginTop: "10px",
-  },
-  box4: {
-     display: "flex",
-      height: "650px",
-    width: "100%",
-    color: "black",
-    flexDirection: "column",
-    alignItems: "flex-end ",
-     objectfit: "cover",
-    objectposition: "left",
-    backgroundImage: "url(' src/assets/office 02.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    justifyContent: "center",
-    paddingLeft: "5%", 
-  },
-    Fivetitle: {
-    fontSize: "2.5rem",
-      fontweight: "bold",
-      width: "50%",
-  },
-  Fivetext: {
-      fontSize: "1.2rem",
-      width: "50%",
-      marginTop: "10px",
+
+  text: {
+    fontSize: "clamp(1rem, 2.2vw, 1.25rem)",
+    lineHeight: 1.7,
+    margin: 0,
   },
 };
