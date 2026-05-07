@@ -101,6 +101,7 @@ const styles = {
     boxSizing: "border-box",
     padding: "clamp(80px, 10vw, 130px) clamp(20px, 6vw, 80px)",
     position: "relative",
+    
   },
 
   rightContent: {
@@ -118,15 +119,15 @@ const styles = {
     background: "transparent",
     padding: "clamp(20px, 4vw, 36px)",
     borderRadius: "20px",
-    backdropFilter: "blur(4px)",
+    // backdropFilter: "blur(4px)",
   },
 
   blackTextBox: {
     width: "min(100%, 620px)",
-    background: "rgba(255,255,255,0.65)",
+    background: "transparent",
     padding: "clamp(20px, 4vw, 36px)",
     borderRadius: "20px",
-    backdropFilter: "blur(4px)",
+    // backdropFilter: "blur(4px)",
     color: "#111827",
   },
 
