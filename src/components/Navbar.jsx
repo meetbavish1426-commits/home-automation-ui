@@ -31,7 +31,7 @@ export default function Navbar({ isLoggedIn, setIsLoggedIn }) {
       {/* Logo */}
       <div className="navbar-logo">
         <Link to="/">
-          <img src="/assets/logo 02.png" alt="logo" />
+          <img src="public/assets/logo-02.png" alt="logo" />
         </Link>
       </div>
 
