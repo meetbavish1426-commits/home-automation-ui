@@ -41,7 +41,7 @@ export default function Services() {
   return (
     <div className="services-page">
       {/* Hero Section */}
-      <section className="services-hero" style={{ backgroundImage: "url('src/assets/2 page.webp')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" ,borderRadius: "20px" }}>
+      <section className="services-hero" style={{ backgroundImage: "url('public/assets/2 page.webp')", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" ,borderRadius: "20px" }}>
         <h1>Smart Home Services</h1>
         <p>Upgrade your lifestyle with comfort, security, and automation.</p>
         <button className="cta-btn">Get Free Consultation</button>
