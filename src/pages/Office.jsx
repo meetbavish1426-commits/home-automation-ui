@@ -6,7 +6,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.rightContent,
-          backgroundImage: "url('src/assets/office 01.jpg')",
+          backgroundImage: "url('src/assets/office 03.webp')",
         }}
       >
         <div style={styles.textBox}>
@@ -66,7 +66,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.leftContent,
-          backgroundImage: "url('src/assets/office 02.jpg')",
+          backgroundImage: "url('src/assets/office 02.webp')",
         }}
       >
         <div style={styles.blackTextBox}>

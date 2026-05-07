@@ -141,7 +141,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-end",
-    backgroundImage: "url('src/assets/bathroom04.jpg')",
+    backgroundImage: "url('src/assets/bathroom04.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
