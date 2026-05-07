@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import logo from "../assets/logo 02.png";
 import "./Navbar.css";
 
 export default function Navbar({ isLoggedIn, setIsLoggedIn }) {
@@ -32,7 +31,7 @@ export default function Navbar({ isLoggedIn, setIsLoggedIn }) {
       {/* Logo */}
       <div className="navbar-logo">
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img src="/assets/logo 02.png" alt="logo" />
         </Link>
       </div>
 
