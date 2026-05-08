@@ -67,7 +67,7 @@ export default function ContactUs() {
       <div
         className="contact-container"
         style={{
-          backgroundImage: "url('/assets/contact-us-image.png')",
+          backgroundImage: "url('/assets/contact-us-image.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
