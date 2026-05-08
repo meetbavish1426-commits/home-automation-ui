@@ -68,7 +68,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
-    backgroundImage: "url('public/assets/bed-room 01.webp')",
+    backgroundImage: "url('/assets/bed-room-01.webp')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
@@ -105,7 +105,7 @@ const styles = {
       padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
       boxSizing: "border-box",
     },
-    backgroundImage: "url('public/assets/bed-room 02.webp')",
+    backgroundImage: "url('/assets/bed-room-02.webp')",
   },
 
   Sectitle: {
@@ -137,7 +137,7 @@ const styles = {
       padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
       boxSizing: "border-box",
     },
-    backgroundImage: "url('public/assets/bed-room 03.webp')",
+    backgroundImage: "url('/assets/bed-room-03.webp')",
     color: "black",
   },
 
@@ -170,7 +170,7 @@ const styles = {
       padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
       boxSizing: "border-box",
     },
-    backgroundImage: "url('public/assets/bed-room04.webp')",
+    backgroundImage: "url('/assets/bed-room-04.webp')",
     color: "white",
   },
 
@@ -203,7 +203,7 @@ const styles = {
       padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
       boxSizing: "border-box",
     },
-    backgroundImage: "url('public/assets/bed-room05.webp')",
+    backgroundImage: "url('/assets/bed-room-05.webp')",
   },
 
   Fivetitle: {
@@ -235,7 +235,7 @@ const styles = {
       padding: "clamp(70px, 10vw, 120px) clamp(20px, 6vw, 80px)",
       boxSizing: "border-box",
     },
-    backgroundImage: "url('public/assets/bed-room 06.webp')",
+    backgroundImage: "url('/assets/bed-room-06.webp')",
     color: "white",
   },
 

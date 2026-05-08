@@ -6,7 +6,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.rightContent,
-          backgroundImage: "url('public/assets/office 03.webp')",
+          backgroundImage: "url('/assets/office-03.webp')",
         }}
       >
         <div style={styles.textBox}>
@@ -18,7 +18,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.leftContent,
-          backgroundImage: "url('public/assets/office 01.webp')",
+          backgroundImage: "url('/assets/office-01.webp')",
         }}
       >
         <div style={styles.textBox}>
@@ -33,7 +33,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.leftContent,
-          backgroundImage: "url('public/assets/office access control.webp')",
+          backgroundImage: "url('/assets/office-access-control.webp')",
         }}
       >
         <div style={styles.textBox}>
@@ -50,7 +50,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.leftContent,
-          backgroundImage: "url('public/assets/office04.webp')",
+          backgroundImage: "url('/assets/office-04.webp')",
         }}
       >
         <div style={styles.textBox}>
@@ -66,7 +66,7 @@ export default function Office() {
         style={{
           ...styles.section,
           ...styles.leftContent,
-          backgroundImage: "url('public/assets/office 02.webp')",
+          backgroundImage: "url('/assets/office-02.webp')",
         }}
       >
         <div style={styles.blackTextBox}>

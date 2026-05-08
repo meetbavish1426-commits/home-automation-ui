@@ -55,7 +55,7 @@ export default function ContactUs() {
     <>
       <div className="hero">
         <video autoPlay loop muted playsInline className="background-video">
-          <source src="public/assets/the-future-of-modern-living.mp4" type="video/mp4" />
+          <source src="/assets/the-future-of-modern-living.mp4" type="video/mp4" />
         </video>
 
         <div className="hero-content">
@@ -67,7 +67,7 @@ export default function ContactUs() {
       <div
         className="contact-container"
         style={{
-          backgroundImage: "url('public/assets/contact us image.png')",
+          backgroundImage: "url('/assets/contact-us-image.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
