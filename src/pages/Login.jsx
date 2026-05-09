@@ -17,7 +17,7 @@ export default function Login({ setIsLoggedIn }) {
 
     try{
 
-      const res = await fetch("https://backend-yvj4b710d-meetbavish1426-1401s-projects.vercel.app/login",{
+      const res = await fetch("http://localhost:5000/login",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"

@@ -15,7 +15,7 @@ function SignIn() {
 
     try{
 
-      const res = await fetch("https://backend-yvj4b710d-meetbavish1426-1401s-projects.vercel.app/signup",{
+      const res = await fetch("http://localhost:5000/signup", {
         method:"POST",
         headers:{
           "Content-Type":"application/json"
@@ -91,7 +91,7 @@ function SignIn() {
 
       <div className="login-card" ref={cardRef}>
 
-        <h2>Sign In</h2>
+        <h2>Sign Up</h2>
 
         <div className="input-group">
           <input 
@@ -149,7 +149,7 @@ function SignIn() {
         </div>
 
         <button onClick={handleSignup}>
-          Sign In
+          Sign Up
         </button>
 
       </div>
