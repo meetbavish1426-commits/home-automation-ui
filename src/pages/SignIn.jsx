@@ -1,99 +1,4 @@
- 
-// function Login() {
-//   return (
-   
-//     <div style={styles.page }>
-    
-//       <div style={styles.container}>
-//         <h1 style={styles.title}>Login</h1>
-
-//         <div style={styles.row}>
-//           <label>Username :</label>
-//           <input type="text" placeholder="username" />
-//         </div>
-
-//         <div style={styles.row}>
-//           <label>Phone Number :</label>
-//           <input type="tel" placeholder="phone number" />
-//         </div>
-
-//         <div style={styles.row}>
-//           <label>Email Id :</label>
-//           <input type="email" placeholder="email id" />
-//         </div>
-
-//         <div style={styles.row}>
-//           <label>Password :</label>
-//           <input type="password" placeholder="password" />
-//         </div>
-
-//         <div style={styles.row}>
-//           <label>BHK :</label>
-//           <select>
-//             <option>select</option>
-//             <option>1 BHK</option>
-//             <option>2 BHK</option>
-//             <option>3 BHK</option>
-//             <option>Bungalow</option>
-//           </select>
-//         </div>
-
-//         <input type="submit" value="Submit" style={styles.submit} />
-//       </div>
-//     </div>
-    
-//   );
-// }
- 
-
-
-
-// const styles = {
- 
-
- 
-//   page: {
-//     display: "flex",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     height: "100vh",        
-//     backgroundColor: "transparent",
-   
-//    },
-   
-
-//   container: {
-    
-//     display: "flex",
-//     flexDirection: "column",
-//     gap: "10px",
-//     padding: "20px",
-//     backgroundColor:"rgba(9, 118, 176, 0.5)",
-//     borderRadius: "8px",
-//     boxShadow:  "0 2px 6px rgba(255, 254, 254, 1)",
-//     width: "320px"
-//   },
-
-//   row: {
-//     display: "flex",
-//     justifyContent: "space-between",
-//     alignItems: "center"
-//   },
-
-//   submit: {
-//     marginTop: "15px",
-//     padding: "8px",
-//     cursor: "pointer"
-//   },
-//   title:{
-//     color:"white"
-//   } 
-  
-// };
-
-// export default Login;
-
- import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function SignIn() {
 
@@ -110,7 +15,7 @@ function SignIn() {
 
     try{
 
-      const res = await fetch("http://localhost:5000/signup",{
+      const res = await fetch("https://backend-yvj4b710d-meetbavish1426-1401s-projects.vercel.app/signup",{
         method:"POST",
         headers:{
           "Content-Type":"application/json"
