@@ -10,13 +10,13 @@ function SignIn() {
   const [password,setPassword] = useState("");
   const [bhk,setBhk] = useState("");
 
-  
+
   // Signup API
   async function handleSignup(){
 
     try{
 
-      const res = await fetch(" https://backend-yvj4b710d-meetbavish1426-1401s-projects.vercel.app/signup", {
+      const res = await fetch("https://backend-seven-green-81.vercel.app/signup", {
         method:"POST",
         headers:{
           "Content-Type":"application/json"
