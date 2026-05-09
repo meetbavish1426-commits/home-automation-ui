@@ -22,7 +22,7 @@ export default function ContactUs() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://backend-seven-green-81.vercel.app/contact", {
+      const res = await fetch("https://backend-seven-green-81.vercel.app/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
