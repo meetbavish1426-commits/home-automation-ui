@@ -50,7 +50,6 @@ export default function AdminUsers() {
               <th style={styles.th}>Phone</th>
               <th style={styles.th}>Email</th>
               <th style={styles.th}>Password</th>
-              <th style={styles.th}>BHK</th>
               <th style={styles.th}>Action</th>
             </tr>
           </thead>
@@ -62,7 +61,7 @@ export default function AdminUsers() {
                 <td style={styles.td}>{user.phone}</td>
                 <td style={styles.td}>{user.email}</td>
                 <td style={styles.td}>{user.password}</td>
-                <td style={styles.td}>{user.BHK}</td>
+               
 
                 <td style={styles.td}>
                   <button

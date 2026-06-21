@@ -9,57 +9,53 @@ function SignIn() {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const [bhk,setBhk] = useState("");
+  const [loading, setLoading] = useState(false);
 
 
   // Signup API
-  async function handleSignup(){
+ async function handleSignup() {
+  setLoading(true);
 
-    try{
-
-      const res = await fetch("https://backend-seven-green-81.vercel.app/signup", {
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
+  try {
+    const res = await fetch(
+      "https://backend-seven-green-81.vercel.app/signup",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        body:JSON.stringify({
+        body: JSON.stringify({
           username,
           phone,
           email,
           password,
-          bhk
-        })
-      });
-
-      const data = await res.json();
-
-      if(data.success){
-
-        alert("Account created successfully");
-
-        // form reset
-        setUsername("");
-        setPhone("");
-        setEmail("");
-        setPassword("");
-        setBhk("");
-
-        // redirect to login
-        window.location.href="/login";
-
-      }else{
-
-        alert(data.message);
-
+          bhk,
+        }),
       }
+    );
 
-    }catch(error){
+    const data = await res.json();
 
-      console.error("Signup error:",error);
-      alert("Server error");
+    if (data.success) {
+      alert("Account created successfully");
 
+      setUsername("");
+      setPhone("");
+      setEmail("");
+      setPassword("");
+      setBhk("");
+
+      window.location.href = "/login";
+    } else {
+      alert(data.message);
     }
-
+  } catch (error) {
+    console.error("Signup error:", error);
+    alert("Server error");
+  } finally {
+    setLoading(false);
   }
+}
 
   // Card animation
   useEffect(()=>{
@@ -149,9 +145,20 @@ function SignIn() {
           <label>BHK</label>
         </div>
 
-        <button onClick={handleSignup}>
-          Sign Up
-        </button>
+<button
+  onClick={handleSignup}
+  disabled={loading}
+  className="flex items-center justify-center gap-2"
+>
+  {loading ? (
+    <>
+      <span className="loader"></span>
+      Signing Up...
+    </>
+  ) : (
+    "Sign Up"
+  )}
+</button>
 
       </div>
 

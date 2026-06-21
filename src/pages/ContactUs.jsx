@@ -17,39 +17,45 @@ export default function ContactUs() {
       [name]: value
     }));
   };
+const [loading, setLoading] = useState(false);
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  setLoading(true);
 
-    try {
-      const res = await fetch("https://backend-seven-green-81.vercel.app/api/contact", {
+  try {
+    const res = await fetch(
+      "https://backend-seven-green-81.vercel.app/api/contact",
+      {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await res.json();
-      console.log("Contact response:", data);
-
-      if (data.success) {
-        alert(data.message);
-
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
-        });
-      } else {
-        alert(data.message || "Message not sent");
+        body: JSON.stringify(formData),
       }
-    } catch (error) {
-      console.log("Submit error:", error);
-      alert("Something went wrong");
+    );
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert(data.message);
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      alert(data.message || "Message not sent");
     }
-  };
+  } catch (error) {
+    console.log("Submit error:", error);
+    alert("Something went wrong");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <>
@@ -128,7 +134,20 @@ export default function ContactUs() {
               required
             ></textarea>
 
-            <button type="submit">Send Message</button>
+          <button
+  type="submit"
+  disabled={loading}
+  className={`submit-btn ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+>
+  {loading ? (
+    <>
+      <span className="loader"></span>
+      Sending...
+    </>
+  ) : (
+    "Send Message"
+  )}
+</button>
           </form>
         </div>
       </div>

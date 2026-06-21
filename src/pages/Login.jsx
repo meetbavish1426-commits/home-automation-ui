@@ -5,52 +5,59 @@ export default function Login({ setIsLoggedIn }) {
 
   const [phoneOrEmail, setPhoneOrEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
-  async function startLogin(){
+async function startLogin() {
 
-    if(!phoneOrEmail || !password){
-      alert("Enter phone/email and password");
-      return;
-    }
-
-    try{
-
-      const res = await fetch("https://backend-seven-green-81.vercel.app/login",{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify({
-          phoneOrEmail: phoneOrEmail,
-          password: password
-        })
-      });
-
-      const data = await res.json();
-
-      if(data.success){
-
-        localStorage.setItem("isLoggedIn","true");
-        setIsLoggedIn(true);
-
-        alert("Login successful");
-
-        navigate("/dashboard");
-
-      }else{
-        alert(data.message);
-      }
-
-    }catch(error){
-
-      console.log(error);
-      alert("Server error");
-
-    }
-
+  if (!phoneOrEmail || !password) {
+    alert("Enter phone/email and password");
+    return;
   }
+
+  setLoading(true);
+
+  try {
+
+    const res = await fetch(
+      "https://backend-seven-green-81.vercel.app/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          phoneOrEmail,
+          password,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    if (data.success) {
+
+      localStorage.setItem("isLoggedIn", "true");
+      setIsLoggedIn(true);
+
+      alert("Login successful");
+
+      navigate("/dashboard");
+
+    } else {
+      alert(data.message);
+    }
+
+  } catch (error) {
+
+    console.log(error);
+    alert("Server error");
+
+  } finally {
+    setLoading(false);
+  }
+}
 
   return (
 
@@ -80,9 +87,24 @@ export default function Login({ setIsLoggedIn }) {
           <label>Password</label>
         </div>
 
-        <form onSubmit={(e)=>{e.preventDefault();startLogin();}}>
-          <button type="submit">Login</button>
-        </form>
+<form
+  onSubmit={(e) => {
+    e.preventDefault();
+    startLogin();
+  }}
+>
+  <button
+    type="submit"
+    disabled={loading}
+    className="flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+  >
+    {loading && (
+      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+    )}
+
+    {loading ? "Logging In..." : "Login"}
+  </button>
+</form>
 
       </div>
 

@@ -164,3 +164,26 @@
     border-radius: 12px;
   }
 }
+
+/* lodder inn contect submit button */
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffffff50;
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
