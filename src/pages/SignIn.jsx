@@ -18,9 +18,9 @@ function SignIn() {
 
   try {
     const res = await fetch(
-      "https://backend-seven-green-81.vercel.app/signup",
+       "https://backend-ddkea1yz9-meetbavish1426-1401s-projects.vercel.app/signup",
       {
-        method: "POST",
+        method: "POST",   
         headers: {
           "Content-Type": "application/json",
         },

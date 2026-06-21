@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminSidebar from "../components/AdminSidebar";
 
 const API_URL =
-  "https://backend-yvj4b710d-meetbavish1426-1401s-projects.vercel.app";
+  "https://backend-nxrhj9qpz-meetbavish1426-1401s-projects.vercel.app";
 
 export default function AdminContacts() {
   const [users, setUsers] = useState([]);

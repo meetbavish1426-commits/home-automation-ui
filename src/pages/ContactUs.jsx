@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
 
   try {
     const res = await fetch(
-      "https://backend-seven-green-81.vercel.app/api/contact",
+      "https://backend-ddkea1yz9-meetbavish1426-1401s-projects.vercel.app/api/contact",
       {
         method: "POST",
         headers: {
