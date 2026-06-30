@@ -4,7 +4,6 @@ import AdminSidebar from "../components/AdminSidebar";
 const API_URL = "https://backend-seven-green-81.vercel.app";
 
 export default function AdminContacts() {
-  const [users, setUsers] = useState([]);
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -12,22 +11,14 @@ export default function AdminContacts() {
     setLoading(true);
 
     try {
-const [usersRes, contactsRes] = await Promise.all([
-  fetch(`${API_URL}/api/users`),
-  fetch(`${API_URL}/api/admin/contacts`),
-]);
+      const res = await fetch(`${API_URL}/api/admin/contacts`);
+      const contactsData = await res.json();
 
-const usersData = await usersRes.json();
-const contactsData = await contactsRes.json();
+      console.log("Fetched contacts:", contactsData);
 
-console.log("Fetched users:", usersData);
-console.log("Fetched contacts:", contactsData);
-
-setUsers(usersData || []);
-setContacts(contactsData.contacts || []);
+      setContacts(contactsData.contacts || []);
     } catch (error) {
       console.log("Error fetching data:", error);
-      setUsers([]);
       setContacts([]);
     } finally {
       setLoading(false);
@@ -38,21 +29,7 @@ setContacts(contactsData.contacts || []);
     fetchData();
   }, []);
 
-  const handleDeleteUser = async (id) => {
-    try {
-      const res = await fetch(`${API_URL}/api/users/${id}`, {
-        method: "DELETE",
-      });
-
-      const data = await res.json();
-
-      alert(data.message);
-
-      fetchData();
-    } catch (error) {
-      console.log("Delete error:", error);
-    }
-  };
+  // removed unused user management (no users on this page)
 
   const handleDeleteContact = async (id) => {
     try {
@@ -82,62 +59,13 @@ setContacts(contactsData.contacts || []);
           color: "#111",
         }}
       >
-        <h1 style={{ marginBottom: "20px" }}>Admin Panel</h1>
+  
 
         {loading ? (
           <p>Loading...</p>
         ) : (
           <>
-            {/* USERS SECTION */}
-            <h2 style={{ marginBottom: "15px" }}>Registered Users</h2>
-
-            {users.length === 0 ? (
-              <p>No users found</p>
-            ) : (
-              users.map((item) => (
-                <div
-                  key={item._id}
-                  style={{
-                    backgroundColor: "#fff",
-                    borderRadius: "12px",
-                    padding: "20px",
-                    marginBottom: "15px",
-                    boxShadow: "0 2px 10px rgba(0,0,0,0.08)",
-                  }}
-                >
-                  <h3>{item.username}</h3>
-
-                  <p>
-                    <strong>Email:</strong> {item.email}
-                  </p>
-
-                  <p>
-                    <strong>Phone:</strong> {item.phone}
-                  </p>
-
-                  <p>
-                    <strong>BHK:</strong> {item.bhk}
-                  </p>
-
-                  <button
-                    onClick={() => handleDeleteUser(item._id)}
-                    style={{
-                      marginTop: "10px",
-                      padding: "10px 14px",
-                      border: "none",
-                      borderRadius: "8px",
-                      backgroundColor: "#f97316",
-                      color: "#fff",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Delete User
-                  </button>
-                </div>
-              ))
-            )}
-
-            {/* CONTACT SECTION */}
+      {/* CONTACT SECTION */}
             <h1 style={{ marginBottom: "15px", marginTop: "40px" }}>
               Contact Messages
             </h1>
