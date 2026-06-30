@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AdminSidebar from "../components/AdminSidebar";
 
-const API_URL =
-  "https://backend-nxrhj9qpz-meetbavish1426-1401s-projects.vercel.app";
+const API_URL = "https://backend-seven-green-81.vercel.app";
 
 export default function AdminContacts() {
   const [users, setUsers] = useState([]);
@@ -13,19 +12,19 @@ export default function AdminContacts() {
     setLoading(true);
 
     try {
-      const [usersRes, contactsRes] = await Promise.all([
-        fetch(`${API_URL}/api/users`),
-        fetch(`${API_URL}/api/contact`),
-      ]);
+const [usersRes, contactsRes] = await Promise.all([
+  fetch(`${API_URL}/api/users`),
+  fetch(`${API_URL}/api/admin/contacts`),
+]);
 
-      const usersData = await usersRes.json();
-      const contactsData = await contactsRes.json();
+const usersData = await usersRes.json();
+const contactsData = await contactsRes.json();
 
-      console.log("Fetched users:", usersData);
-      console.log("Fetched contacts:", contactsData);
+console.log("Fetched users:", usersData);
+console.log("Fetched contacts:", contactsData);
 
-      setUsers(Array.isArray(usersData) ? usersData : []);
-      setContacts(Array.isArray(contactsData) ? contactsData : []);
+setUsers(usersData || []);
+setContacts(contactsData.contacts || []);
     } catch (error) {
       console.log("Error fetching data:", error);
       setUsers([]);

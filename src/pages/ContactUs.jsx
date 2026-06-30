@@ -18,15 +18,16 @@ export default function ContactUs() {
     }));
   };
 const [loading, setLoading] = useState(false);
+const API_URL = "https://backend-seven-green-81.vercel.app";
 const handleSubmit = async (e) => {
   e.preventDefault();
 
   setLoading(true);
 
   try {
-    const res = await fetch(
-      "https://backend-ddkea1yz9-meetbavish1426-1401s-projects.vercel.app/api/contact",
-      {
+   const res = await fetch(
+  `${API_URL}/api/contact`,
+  {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
