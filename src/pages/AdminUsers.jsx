@@ -5,23 +5,23 @@ import AdminSidebar from "../components/AdminSidebar";
 export default function AdminUsers() {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
-
   const fetchUsers = () => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get("https://backend-seven-green-81.vercel.app/api/admin/users")
       .then((res) => setUsers(res.data))
       .catch((err) => console.error(err));
   };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
 
   // DELETE FUNCTION
   const deleteUser = (id) => {
     if (!window.confirm("Are you sure to delete this user?")) return;
 
     axios
-      .delete(`http://localhost:5000/api/users/${id}`)
+      .delete(`https://backend-seven-green-81.vercel.app/api/admin/users/${id}`)
       .then(() => {
         alert("User deleted");
         fetchUsers(); // refresh list

@@ -18,7 +18,7 @@ function SignIn() {
 
   try {
     const res = await fetch(
-       "https://backend-ddkea1yz9-meetbavish1426-1401s-projects.vercel.app/signup",
+       "https://backend-3znh1tfq6-meetbavish1426-1401s-projects.vercel.app/signup",
       {
         method: "POST",   
         headers: {
